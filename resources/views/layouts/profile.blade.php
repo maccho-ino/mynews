@@ -10,6 +10,7 @@
     　　<meta name="csrf-token" content="{{csrf_token() }}">
     　　
     　　{{-- 各ページごとにtittleタグを入れるために@yieldで空けておく --}}
+    　　<!-- TODO: 不要なタイトルは後で削除 -->
     　　<tittle>@yield('tittle')</tittle>
     　　
     　　{{-- Laravel標準で用意されているJavascriptを読み込む --}}
