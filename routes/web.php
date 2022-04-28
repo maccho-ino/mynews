@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'admin'], function() {
-    Route::get('news/create', 'Admin\NewsController@add');
+    Route::get('news/create', 'Admin\NewsController@add')->middleware('auth');
 });
 
 /*「http://XXXXXX.jp/XXX というアクセスが来たときに、 
@@ -31,6 +31,10 @@ admin/profile/edit にアクセスしたら
 ProfileController の edit Action に
 割り当てるように設定してください*/
 Route::group(['prefix' => 'admin'], function() {
-    Route::get('profile/create','ProfileController@add');
-    Route::get('profile/edit','ProfileController@edit');
+    Route::get('profile/create','Admin\ProfileController@add');
+    Route::get('profile/edit','Admin\ProfileController@edit');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
