@@ -11,7 +11,7 @@
     　　
     　　{{-- 各ページごとにtittleタグを入れるために@yieldで空けておく --}}
     　　<!-- TODO: 不要なタイトルは後で削除 -->
-    　　<tittle>@yield('tittle')</tittle>
+    　　<title>@yield('title')</title>
     　　
     　　{{-- Laravel標準で用意されているJavascriptを読み込む --}}
     　　<script src="{{ secure_asset('js/app.js') }}" defer></script>
@@ -27,7 +27,7 @@
     <body>
         <div id="app">
             {{-- 画面上部に表示するナビゲーションバー --}}
-            <nav class="navbar-expand-mdnavbar-dark navbar-laravel">
+            <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
                 <div class="container">
                     <a class="navbar-brand" href="{{url('/') }}">
                         {{ config('app.name', 'Laravel') }}
@@ -65,7 +65,6 @@
                                 </div>
                             </li>
                         @endguest
-                            
                         </ul>
                     </div>
                 </div>
