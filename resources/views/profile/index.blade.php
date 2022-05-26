@@ -9,16 +9,16 @@
                         <div class="row">
                             <div class="text col-md-6">
                                 <div class="name">
-                                    {{ \Str::limit($post->name, 40) }}
+                                    {{ \Str::limit('【名前】' . $post->name, 40) }}
                                 </div>
                                 <div class="gender">
-                                    {{ \Str::limit($post->gender, 10) }}
+                                    {{ \Str::limit('【性別】' . $post->gender, 40) }}
                                 </div>
                                 <div class="hobby">
-                                    {{ \Str::limit($post->hobby, 60) }}
+                                    {{ \Str::limit('【趣味】' . $post->hobby, 60) }}
                                 </div>
                                 <div class="introduction">
-                                    {{ \Str::limit($post->introduction, 1500) }}
+                                    {{ \Str::limit('【自己紹介】' . $post->introduction, 1500) }}
                                 </div>
                             </div>
                         </div>
